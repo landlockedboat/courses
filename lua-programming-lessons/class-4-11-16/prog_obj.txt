@@ -1,0 +1,34 @@
+
+public class Weapon {
+  public Weapon(int ammunition, float weight) {
+    this.ammunition = ammunition;
+    this.weight = weight;
+  }
+  public int ammunition = 100;
+  float weight = 10.f;
+}
+
+public class Machinegun : Weapon {
+  public Machinegun(int ammunition, float weight) :
+    base (int ammunition, float weight) {
+    //No fa res
+
+  }
+  public Machinegun(int ammunition) :
+    base (int ammunition, 19.0f) {
+    //No fa res
+
+  }
+}
+
+GameController : MonoBehaviour
+
+void Start(){
+
+  Machinegun machinegun = new Machinegun(100);
+  Machinegun m = new Machinegun(100, 20.0f);
+
+  Machinegun m1 = new Machinegun(100, 30.0);
+
+  console.log();
+}

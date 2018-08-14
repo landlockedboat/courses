@@ -1,0 +1,13 @@
+Player
+  [SerializeField]
+  private Weapon weapon;
+  INPUT IF KEYPRESSED = FIRE {weapon.Shoot()}
+  |
+  |
+  |
+  V
+Weapon
+  public void Shoot();
+  public void Reload();
+
+  public int GetAmmo();

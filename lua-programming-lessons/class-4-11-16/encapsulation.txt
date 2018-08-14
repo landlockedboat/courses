@@ -1,0 +1,47 @@
+GameController
+public methods:
+    public string GetState()
+    ...
+  depencies:
+    SceneManager
+    UIManager
+    SoundManager
+    Player
+    Enemies
+    ...
+  code:
+    [SerializeField]
+    public Player player;
+
+WeatherManager
+  public methods:
+      string GetState()
+      ...
+  depencies:
+    GameController
+    ...
+
+CloudsManager
+  public methods:
+    ...
+  depencies:
+    WeatherManager
+    ...
+  how to switch cloud layouts:
+    [SerializeField]
+    private WeatherManager weatherManager;
+    ...
+    Start(){
+      //weatherManager = GameObject.Find("WeatherManager").
+      //  GetComponent<WeatherManager>();
+      ...
+    }
+    ...
+    weatherManager.GetState()
+
+LightningManager
+  public methods:
+    ...
+  depencies:
+    WeatherManager
+    ...
