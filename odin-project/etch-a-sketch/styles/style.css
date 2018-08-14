@@ -1,0 +1,33 @@
+#board {
+  border: 1px solid black;
+  width: 640px;
+  height: 640px;
+  background-color: black;
+}
+
+#panel {
+  width: 640px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tile {
+  border: 1px dashed #666;
+  height: 40px;
+  width: 40px;
+  background-color: #AAA;
+}
+
+.button-cont {
+  text-align: center;
+}
+
+#resize {
+  width: 70px;
+  height: 20px;
+}

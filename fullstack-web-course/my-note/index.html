@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Note</title>
+		<script src="main.js"></script> 
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>My Note</h1>
+		</header>
+
+		<section id="container">
+			<div id="note" contenteditable="true"
+									onkeyup="saveNote(this.id)">
+			</div>
+		</section>
+
+		<footer>
+			<div>
+				<a href="" class="clear" onclick="javascript:clearNote()">
+					Clear Note
+				</a>
+			</div>
+			<p>My Note &copy; 2018</p>
+		</footer>
+
+	</body>
+	<script>getNote();</script>
+</html>

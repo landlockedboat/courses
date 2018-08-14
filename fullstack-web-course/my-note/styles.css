@@ -1,0 +1,27 @@
+body{
+	font-family: Tahoma;
+	line-height: 1.6em;
+	background: #f4f4f4;
+}
+
+header, footer
+{
+	text-align: center;
+}
+
+#container
+{
+	width: 400px;
+	margin: 50px auto;
+	background: #ffffa5;
+	overflow: hidden;
+	padding: 30px;
+}
+
+.clear
+{
+	text-decoration: none;
+	background: #333;
+	color: #fff;
+	padding: 10px;
+}
