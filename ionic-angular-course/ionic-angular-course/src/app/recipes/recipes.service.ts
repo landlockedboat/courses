@@ -9,13 +9,13 @@ export class RecipesService {
     {
       id: 'r1',
       title: 'Schnitzel',
-      imageUrl: 'https://loremflickr.com/640/360',
+      imageUrl: 'https://placekitten.com/640/360',
       ingredients: ['French Fries', 'Tofu', 'Salad']
     },
     {
       id: 'r2',
       title: 'Spaghetti',
-      imageUrl: 'https://loremflickr.com/640/360',
+      imageUrl: 'https://placekitten.com/640/360',
       ingredients: ['Spaghetti', 'Vegan cheese', 'Tomatico']
     }
   ];

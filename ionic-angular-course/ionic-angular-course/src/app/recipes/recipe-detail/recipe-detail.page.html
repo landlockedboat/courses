@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>recipe-detail</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/recipes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{locadedRecipe.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+        <ion-img [src]="locadedRecipe.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 padding>{{locadedRecipe.title}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let ig of locadedRecipe.ingredients">
+              {{ig}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
