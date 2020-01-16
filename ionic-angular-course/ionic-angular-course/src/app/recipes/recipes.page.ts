@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RecipesService } from './recipes.service';
 import { Recipe } from './recipe.model';
 
 @Component({
@@ -8,25 +8,11 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.page.scss'],
 })
 export class RecipesPage implements OnInit {
-
-  recipes: Recipe[] = [
-    {
-      id: 'r1',
-      title: 'Schnitzel',
-      imageUrl: 'https://loremflickr.com/640/360',
-      ingredients: ['French Fries', 'Tofu', 'Salad']
-    },
-    {
-      id: 'r2',
-      title: 'Spaghetti',
-      imageUrl: 'https://loremflickr.com/640/360',
-      ingredients: ['Spaghetti', 'Vegan cheese', 'Tomatico']
-    }
-  ];
-
-  constructor() { }
+  recipes: Recipe[];
+  constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
+    this.recipes = this.recipesService.getAllRecipes();
   }
 
 }
