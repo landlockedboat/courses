@@ -27,11 +27,9 @@ export class RecipesService {
   }
 
   getRecipe(recipeId: string) {
-    return {
-      ...this.recipes.find(recipe => {
-        return recipe.id === recipeId;
-      })
-    };
+    const recipe = this.recipes.find(r => r.id === recipeId);
+    return recipe ? { ...recipe } : undefined;
+
   }
 
   deleteRecipe(recipeId: string) {
