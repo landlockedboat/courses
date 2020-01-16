@@ -13,6 +13,12 @@ export class RecipesPage implements OnInit {
 
   ngOnInit() {
     this.recipes = this.recipesService.getAllRecipes();
+    console.log(this.recipes);
   }
 
+  // Added this because of a bug on the angular router
+  // https://stackoverflow.com/questions/44745354/ngoninit-not-being-called-after-router-navigate
+  ionViewWillEnter() {
+    this.ngOnInit();
+  }
 }
